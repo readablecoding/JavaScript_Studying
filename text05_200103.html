@@ -10,6 +10,7 @@
 	setTimeout(func, 3000);		//함수 이름을 전달하면 함수 값을 전달하게 됨, 3초 이후에 함수 한 번 실행 
 	*/
 	
+	/*
 	var cnt = 5;
 	function func(){
 		console.log(cnt--);
@@ -19,18 +20,18 @@
 		}
 			
 	}
-	//var interval = setInterval(func, 1000);	//1초마다 출력이 반복하게 함. 그 결과를 다시 interval에 담음
-
+	var interval = setInterval(func, 1000);	//1초마다 출력이 반복하게 함. 그 결과를 다시 interval에 담음
+	*/
+	
+	
+	var cnt = 5;
 	var interval = setInterval(function(){		//함수를 즉석에서 만들어 값처럼 바로 제공
 		console.log(cnt--);
 		if(cnt < 0)
 		{
-			clearInteval(interval);
+			clearInterval(interval);
 		}
 	}, 1000);
-	
-	
-	
 	
 	
 </script>
