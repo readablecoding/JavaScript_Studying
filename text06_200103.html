@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>text06.html</title>
+</head>
+<script type="text/javascript">
+
+	/* var code = "var a = 10;";
+	code += "alert(a);";
+	eval(code); //문자열 안의 코드를 실행하겠다. 코드 안에 있는 a의 값을 출력
+	alert(a);	//메모리 안에 있는 변수 a의 값이 10을 출력
+	 */
+	 
+	var i = 10 / 0;
+	console.log(i);				//Infinity
+	console.log(isFinite(i));	//false -> 무한대일 때 false가 뜬다.
+	
+	console.log(NaN == NaN);	//false	-> ==로는 서로 비교 못함
+	console.log(isNaN(NaN));
+	
+	
+</script>
+
+<body>
+
+</body>
+</html>

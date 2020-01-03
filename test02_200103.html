@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>test02.html</title>
+<script type="text/javascript">
+	var menu = ["떡볶이", "순대", "튀김"];						//대괄호로 표현. 배열 초기화, 자바스크립트에서 배열은 object타입
+	console.log("메뉴 목록: " + menu);
+	
+	console.log("0번 메뉴: " + menu[0]);						//떡볶이
+	menu[menu.length] = "모둠 튀김";							//요소 초기화
+	console.log("마지막 메뉴 : " + menu[menu.length - 1]);		//모둠 튀김 -> 마지막 인덱스 참조. menu.length는 배열 요소의 길이
+	
+	console.log("순대의 메뉴 번호 : " + menu.indexOf("순대"));		//1 -> indexOf()는 특정 요소 검색해 위치 보여줌
+	console.log("스테이크의 메뉴 번호 : " + menu.indexOf("스테이크"));	//-1 -> 없는 요소가 있다면 -1이 나옴
+	
+	//맨 마지막 요소 추가
+	menu.push("김밥");					
+	console.log("마지막 메뉴 추가 : " + menu); //메뉴 목록 : 떡볶이,순대,튀김,모둠 튀김,김밥 -> 배열 마지막에 요소 추가
+	
+	//맨 마지막 요소 제거
+	menu.pop();
+	console.log("마지막 메뉴 제거 : " + menu);	//메뉴 목록 : 떡볶이,순대,튀김,모둠 튀김 -> 맨 마지막 요소 제거
+	
+	//중간 요소 추가, 제거
+	menu.splice(2, 0, "라면");  //중간 메뉴 추가 : 떡볶이,순대,라면,튀김,모둠 튀김  ->(인덱스 위치, 제거 개수는 0으로, 추가할 것)
+	console.log("중간 메뉴 추가 : " + menu);
+	
+	menu.splice(2, 1);			//중간 메뉴 제거: 떡볶이,순대,튀김,모둠 튀김 -> (인덱스 위치, 제거 개수)
+	console.log("중간 메뉴 제거: " + menu);
+	console.log("\n");
+	
+	//배열 새로 만드는 다른 방법
+	var arr = new Array(1, 2, 3);	
+	arr.push(3.14);			//실수
+	arr.push("hello");		//string
+	arr.push(true);			//boolean
+	arr.push(undefined);
+	arr.push(null);
+	console.log(arr);		//[1, 2, 3, 3.14, "hello", true, undefined, null]
+
+</script>
+
+</head>
+<body>
+
+</body>
+</html>

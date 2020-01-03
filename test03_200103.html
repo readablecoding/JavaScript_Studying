@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>test03.html</title>
+
+<script type="text/javascript">
+	var arr = new Array(1, 2, 3); //배열 만들기, 인덱스를 사용할 경우 
+	for (var i = 0; i < arr.length; i ++){		//자바스크립트는 int가 없으니 var i로 쓰기
+		console.log(i + "번째 : " + arr[i]);	
+	}
+	console.log("\n");
+	
+	for(var i in arr) { // (요소를 담을 변수 in 요소를 꺼내올 변수) 
+		console.log(i + "번째 : " + arr[i]);
+	}
+	
+</script>
+</head>
+<body>
+
+</body>
+</html>

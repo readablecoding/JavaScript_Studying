@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>test04.html</title>
+<script type="text/javascript">
+	//say();						
+	alert(say);				//변수명이 오면 입력한 함수 내용 전부 나옴
+	alert(typeof say);		//function 타입
+
+	alert(say());			// Hello 먼저 나오고  1이 나옴 -> say() 변수를 함수처럼 실행 , alert()하고 반환하는 값인 1이 나옴
+	
+	function say(){			//접근 지정자가 따로 없다. 매개변수에 자료형이 없다. 반환값의 자료형이 없다. 
+		alert("Hello");
+	}
+	
+	say(); 
+	
+	
+	
+	
+	//익명함수: 함수를 값처럼 사용
+	//익명함수인 function() 사용, 함수를 say 변수에 대입
+	var say = function(){		
+		alert("Hello");
+		return 1;
+	}
+	
+	
+
+</script>
+</head>
+<body>
+
+</body>
+</html>

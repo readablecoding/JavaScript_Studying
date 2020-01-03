@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>text05.html</title>
+<script type="text/javascript">
+	/* function func(){
+		console.log("밀리 초 이후에 실행될 함수입니다.");		
+	}
+	setTimeout(func, 3000);		//함수 이름을 전달하면 함수 값을 전달하게 됨, 3초 이후에 함수 한 번 실행 
+	*/
+	
+	var cnt = 5;
+	function func(){
+		console.log(cnt--);
+		if (cnt < 0)
+		{
+			clearInterval(interval); //cnt가 0보다 작다면 interval를 중단하겠다.
+		}
+			
+	}
+	//var interval = setInterval(func, 1000);	//1초마다 출력이 반복하게 함. 그 결과를 다시 interval에 담음
+
+	var interval = setInterval(function(){		//함수를 즉석에서 만들어 값처럼 바로 제공
+		console.log(cnt--);
+		if(cnt < 0)
+		{
+			clearInteval(interval);
+		}
+	}, 1000);
+	
+	
+	
+	
+	
+</script>
+
+</head>
+<body>
+
+</body>
+</html>
