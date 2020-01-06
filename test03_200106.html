@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>test03.html</title>
+<script type="text/javascript">
+
+	//생성자 함수 만들기: 비슷한 형태의 객체를 쉽게 만들 때 사용
+	function Person(name, age){
+		this.name = name; 		//객체 만들때 속성명 = 매개변수 	
+		this.age = age;
+	}
+	
+	//prototype 정의: 생성자 함수 밖에서 한다. 공통으로 사용할 부분이라서 따로 만든 것
+	Person.prototype.introduce = function(){		//생성자 함수명.prototype.추가할 속성명 = 값 초기화, 모두가 공유하게 됨.
+		console.log("안녕하세요, " + this.name + "입니다.");		
+	}
+
+	//객체 만들기: 좀 더 편리한 방법
+	var hong = new Person("홍길동", 30);
+	var jeon = new Person("전우치", 25);
+
+	hong.introduce();
+	jeon.introduce();
+	
+	//객체 배열 만들기, 숫자 오름차순 정렬
+	var arr = [hong, jeon];
+	
+	console.log(arr); //자바스크립트에서 객체 배열에서는 순서가 최종적인 내용만 출력된다. 뒤의 sort함수 실행결과가 영향을 미침.
+	//0: Person {name: "전우치", age: 25}
+	//1: Person {name: "홍길동", age: 30}
+	
+	arr.sort(function(left, right){
+		return left.age - right.age;		//양수가 되면 순서가 바뀐다. 오름차순으로 되게끔 함
+	});
+	console.log(arr);
+	//0: Person {name: "전우치", age: 25}
+	//1: Person {name: "홍길동", age: 30}
+	
+</script>
+</head>
+<body>
+
+</body>
+</html>

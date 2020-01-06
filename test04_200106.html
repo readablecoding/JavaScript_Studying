@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>test04.html</title>
+<script type="text/javascript">
+
+	var i = Number("365");		//문자 365를 숫자 365로 만든다.
+	var j = new Number("365");	//new 키워드로 Number 객체를 만든 것
+	
+	console.log(i);				//365
+	console.log(j);				//Number {365}
+	
+	console.log(Number.MAX_VALUE);	//1.7976931348623157e+308
+	console.log(Number.MIN_VALUE);	//5e-324
+	
+	console.log(1.0000000000000001e+308 + Number.MAX_VALUE);	//Infinity -> 자릿수를 맞춰야 계산이 원활히 됨
+	
+	
+</script>
+</head>
+<body>
+
+</body>
+</html>

@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>test05.html</title>
+<script type="text/javascript">
+	var str = "Javascript/is/fun!";
+	
+	console.log(str.indexOf("i"));		// 7
+	console.log(str.lastIndexOf("is")); // 11 -> 문자 뿐만 아니라 문자열도 검색 가능
+	console.log(str.replace("fun", "interesting"));		// Javascript is interesting!
+	console.log(str);					//Javascript is fun! -> replace는 원본 문자열을 바뀌지 않는다.
+	console.log(str.substring(0, 4));	//Java -> 첫 0번 인덱스는 포함하지만 마지막 4번 인덱스는 포함하지 않는다.
+	console.log(str.split("/"));	// ["Javascript", "is", "fun!"] -> str.split()라면 공백을 기준으로 분리한다.
+	
+	var str2 = "I'm am a boy";
+	console.log(str2.split(" "));	//["I'm", "am", "a", "boy"] -> 공백을 제외한 덩어리씩 나오게 하는 방법
+	
+</script>
+</head>
+<body>
+
+</body>
+</html>

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>test07.html</title>
+<script type="text/javascript">
+	var today = new Date();	
+	console.log(today);	//Mon Jan 06 2020 11:21:40 GMT+0900 (한국 표준시)
+	
+	var someday = new Date(1999, 3, 20, 16, 42, 19);	//1999년 3월 20일 16시 24분 19초를 입력함 -> 월이 -1을 인식해야 한다. 3을 입력하면 4로 인식됨.
+	//년, 월까지는 필수 정보라 반드시 입력해야 한다. 생략하고 싶다면 뒤에서부터
+	console.log(someday);							//Tue Apr 20 1999 16:42:19 GMT+0900 (한국 표준시)
+	
+	var dateArr = ["일", "월", "화", "수", "목", "금", "토"];
+	var dateStr = "";
+	dateStr += today.getFullYear() + "년 ";
+	dateStr += (today.getMonth() + 1) + "월 ";	//getMonth()로 가져올 때 -1이 되니 +1을 해준다.
+	dateStr += today.getDate() + "일은 ";
+	dateStr += dateArr[today.getDay()] + "요일입니다.";	//요일에 관한 숫자를 받아 dateArr배열에서 요일을 꺼내옴
+	
+	console.log(dateStr);				//2020년 1월 6일은 월요일입니다..
+	
+</script>
+
+</head>
+<body>
+
+</body>
+</html>

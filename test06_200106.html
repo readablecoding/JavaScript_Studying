@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>test06.html</title>
+<script type="text/javascript">
+	var arr = [1, 36, 94, 128];	
+	var arr2 = [92, 87, 361];
+	console.log(arr.concat(arr2));	// [1, 36, 94, 128, 92, 87, 361] -> arr과 arr2를 접합시킴
+
+	console.log(arr);				// [1, 36, 94, 128] -> concat()은 원본 배열에 영향을 끼치지 않는다.
+	
+	arr.reverse();					//reverse()는 원본 배열에 영향을 준다.
+	console.log(arr);				//[128, 94, 36, 1]
+	
+	arr.sort(); 					//sort()는 원본 배열에 영향을 준다. 문자열 오름차순대로 정렬
+	console.log(arr);				//[1, 128, 36, 94] -> 문자열 오름차순이므로 사전 순서대로 나옴.
+	
+	//숫자 오름차순 정렬
+	arr.sort(function(left, right) {	//함수를 인자로 받는다. 함수는 2개의 인자를 받는다. 
+		return left - right;			//3가지 경우의 수가 있다. 양수면 순서를 바꾼다. 0이면 그대로. 음수면 그대로	
+	});
+	console.log(arr);				//[1, 36, 94, 128]
+	
+	//숫자 내림차순 정렬
+	arr.sort(function(left, right) {	//함수를 인자로 받는다. 함수는 2개의 인자를 받는다. 
+		return right - left;			//3가지 경우의 수가 있다. 
+	});
+	console.log(arr);				//[128, 94, 36, 1]
+	
+</script>
+
+</head>
+<body>
+
+</body>
+</html>

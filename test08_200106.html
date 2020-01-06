@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>test08.html</title>
+<script type="text/javascript">
+	//객체 파일
+	var obj = {			
+			a: 1
+		,	b: 2
+		,	c: 3	
+	}
+	var str = JSON.stringify(obj);	//객체를 전달하면 JSON문자열로 변환
+	console.log(obj); 				//{a: 1, b: 2, c: 3}
+	console.log(str);				//{"a":1,"b":2,"c":3}
+	
+	console.log(typeof obj);		//object
+	console.log(typeof str);		//string
+		
+</script>
+</head>
+<body>
+
+</body>
+</html>
