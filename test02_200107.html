@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>test02.html</title>
+<script type="text/javascript">
+
+	console.log(location);		//location 객체 그 자체 정보를 보여줌
+	console.log(location.href);	//http://localhost:8888/Day0107/test02.html -> 현재 문서의 URL
+	
+	//주소 이동
+	//location = "https://www.naver.com";	// location 객체 그 자체에 주소를 문자열로 담으면 그 주소로 이동 가능. 잘 사용안함
+	//location.href = "test01.html";	// 주소를 문자열로 입력해 대입하면 즉시 그 주소로 이동한다. 가장 많이 사용하는 방법
+	// -> 특정 이벤트에서 강제로 사용자를 이동하게 하려면 location.href를 사용한다.
+	//location.assign("test01.html"); //이동 밖에 못한다. 상대주소를 입력
+	//location.replace("test01.html"); //뒤로가기가 불가능
+	//location.reload(); //페이지를 새로고침, 통신결과를 다시 반영할 때 사용
+	
+	//navigator 객체 사용
+	console.log(navigator.userAgent); //브라우저 접속 정보 
+	// Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/79.0.3945.88 Safari/537.36
+	
+	
+</script>
+</head>
+<body>
+
+</body>
+</html>

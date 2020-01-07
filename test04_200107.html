@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>test04.html</title>
+<script type="text/javascript">
+
+	window.onload = function(){
+		var h1 = document.createElement("h1"); 	 		//h1태그를 만들어 h1 변수에 저장
+		var txt = document.createTextNode("Hello");  	//텍스트를 작성했다.
+		h1.appendChild(txt);							//h1에 txt를 추가함
+		document.body.appendChild(h1);					//body부분에 h1을 추가함
+		
+		/* for(var key in document){
+			console.log(key +  ": " + document[key]);	//body가 null인지 확인한 용도
+		}  */
+	}
+	
+</script>
+</head>
+<body>
+</body>
+</html>

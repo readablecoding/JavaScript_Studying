@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>test01.html</title>
+<script type="text/javascript">
+
+	alert("Hello, World!");			//window 객체는 전역 객체라서 객체명 생략 가능, 훨씬 편한 방법
+	window.alert("Hi, SWDO!");		//window객체에서 직접 호출하는 방법, 객체명을 그대로 써도 된다.
+	
+	console.log("innerWidth: " + innerWidth + ", innerHeight: " + innerHeight);
+	//innerWidth: 980, innerHeight: 722 -> 내부 폭과 높이, 단위는 픽셀
+	console.log("outerWidth: " + outerWidth + ", outerHeight: " + outerHeight);
+	//outerWidth: 1536, outerHeight: 824 
+	
+	//open(); //비어있는 새 창 띄우기, 팝업을 허용해야 사용이 가능하다. 매개변수로 여러가지를 받을 수 있다.
+	
+	var newWindow = open("", "", "width=300, height=200, fullscreen=yes");	//URL을 인자로 받는 경우 -> 결제 창, 광고 창 구현 가능하다.
+	//open(URL, 창 이름, 설정:새 창의 폭과 높이 설정(픽셀 단위)+ 풀스크린); -> 별도의 창으로 뜬다. 크롬에서 fullscreen=yes이 작동 안됨
+	//변수에 담아 사용하는 것이 편리하다.
+	
+	//폭, 높이 가운데 정렬
+	var newWidth = (screen.width - newWindow.outerWidth) / 2; // (접속화면 폭 / 2) - (새 창 폭 / 2)
+	var newHeight =(screen.height - newWindow.outerHeight) / 2;	// (접속화면 높이 / 2) - (새 창 높이 / 2)
+	newWindow.moveTo(newWidth, newHeight);
+	
+	//3초 뒤에 뭔가를 하는 것
+	setTimeout(function(){
+		console.log("newWindow-innerWidth: " + newWindow.innerWidth 
+				+ ", newWindow-innerHeight: " + newWindow.innerHeight);	//newWindow-innerWidth: 304, newWindow-innerHeight: 210
+		 //newWindow.close();	//창 닫기
+		 
+		 //newWindow.resizeTo(400,300); //3초 후 창의 절대적 사이즈 바꾸기
+		 newWindow.resizeBy(400,300); // 600, 500 ->처음 정한 것을 더하거나 빼 사이즈를 바꾼다.
+		 
+		 //새 창 가운데 정렬
+		 newWidth = (screen.width - newWindow.outerWidth) / 2;
+		 newHeight = (screen.height - newWindow.outerHeight) / 2;
+		 newWindow.moveTo(newWidth, newHeight);
+	}, 3000);
+	
+	var str = "";
+	var cnt = 0;
+	for(var key in window){	
+		str += (cnt++) + ": " + key + "\n";	//window객체의 모든 속성을 key에 담을 수 있다.
+		
+	}
+	console.log(str);
+	
+	
+</script>
+</head>
+<body>
+
+</body>
+</html>
