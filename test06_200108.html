@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>test06.html</title>
+<script type="text/javascript">
+	window.onload = function() {
+		var txt2 = document.getElementById("txt2");
+		var txt = window.opener.document.getElementById("txt"); //window.opener는 열린 창 입장에서 자기를 열어준 객체를 opener로 열기, 그 객체 안의 요소 가져오기
+		
+		txt2.value = txt.value;	// 텍스트를 가져와 넣기
+		
+		document.getElementById("btn2").onclick = function(){
+			txt2 = document.getElementById("txt2"); //사용자가 입력한 내용 가져오기
+			
+			txt.value = txt2.value; //사용자가 입력한 내용을 자기를 열어준 곳에 값을 넘겨줌	
+		}
+	}
+</script>
+</head>
+<body>
+	<h1>test06.html</h1>
+	<textarea id="txt2"></textarea>
+	<input id="btn2" type="button" value="재전송하기">
+</body>
+</html>

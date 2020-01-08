@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>test02.html</title>
+<script type="text/javascript">
+	window.onload = function() {
+		setTimeout(function() {
+			var img = document.getElementsByTagName("img")[0];	//배열의 0번 인덱스 선택
+			img.setAttribute("src", "http://www.journal-d.kr/news/photo/201704/14768_9689_3049.jpg");
+			//이미지 바꾸는 것
+			
+			var header = document.getElementById("header");
+			header.innerHTML = "<b>피자의 종류</b>";
+			
+			var ul = document.querySelector("ul[data-source='menu']");
+			//console.log(u1);
+			var tag = "";
+			tag += "<li>고르곤졸라 피자</li>";
+			tag += "<li>콤비네이션 피자</li>";
+			tag += "<li>불고기 피자</li>";
+			ul.innerHTML = tag; //문자열을 추가할 때는 innerHTML로 하는 것이 일반적, innerHTML하면 기존 내용이 없어짐
+			
+		}, 5000); //5초 타이머
+	}
+</script>
+</head>
+<body>
+	<img src ="https://contents.sixshop.com/thumbnails/uploadedFiles/61322/product/image_1529369647990_750.jpg">
+	
+	<h1 id="header">쿠키의 종류</h1>
+	<ul data-source="menu">
+		<li>치즈 쿠기</li>
+		<li>초코칩 쿠키</li>
+		<li>마카다미아 쿠키</li>
+	</ul>
+</body>
+</html>

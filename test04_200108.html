@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>test04.html</title>
+<script type="text/javascript">
+
+	//1)고전적 방법
+	/* window.onload = function()
+	{
+		document.getElementById("login").onsubmit = function()
+		{
+			var userid = document.getElementById("userid").value; //객체에서 값을 가져오려면 .value를 꼭 쓰기
+			
+			if(userid.length < 3 || userid.legnth > 10) 
+			{
+				alert("ID는 3글자 이상, 10글자 이하로 작성해주세요.");	
+				return false; //문제가 있으니 전송 막기
+			};
+			
+			var userpw = document.getElementById("userpw").value;
+			
+			if(userpw.length < 3 || userpw.length > 10) 
+			{
+				alert("PW는 3글자 이상, 10글자 이하로 작성해주세요.");
+				return false;	//문제가 있으니 전송 막기
+			};
+			
+			alert("입력 완료!");
+			return true; 
+		};
+	}; 	 */
+	
+	//2)인라인 방법
+	function infoCheck(){
+		var userid = document.getElementById("userid").value; //객체에서 값을 가져오려면 .value를 꼭 쓰기
+		
+		if(userid.length < 3 || userid.legnth > 10) {
+			alert("ID는 3글자 이상, 10글자 이하로 작성해주세요.");	
+			return false; //문제가 있으니 전송 막기
+		};
+		
+		var userpw = document.getElementById("userpw").value;
+		
+		if(userpw.length < 3 || userpw.length > 10) {
+			alert("PW는 3글자 이상, 10글자 이하로 작성해주세요.");
+			return false;	//문제가 있으니 전송 막기
+		};
+		
+		alert("입력 완료!");
+		return true; 
+	};
+	
+</script>
+</head>
+
+<body>
+	<!-- <form id="login" action="test03.html"> -->
+	<form id="login" action="test03.html" onsubmit="return infoCheck();">
+		<ul>
+			<li>
+				ID :
+				<input id="userid" type="text" name="userid">
+			</li>
+			<li>
+				PW :
+				<input id="userpw" type="password" name="userpw">
+			</li>		
+		</ul>
+		<input type="submit" value="전송하기">		
+	</form>
+</body>
+</html>
